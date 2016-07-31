@@ -7,22 +7,22 @@
 </head>
 <body onload = "screen_change()"  onresize = "screen_change()">
 <h1>My Column Design <span id = "header"></span></h1>
-<section>
+<section class = "first_color">
    <div class = "title_position"  class = "title">Title</div>
   <div  class = "clear"></div>
-  <p class = "section_padding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!
+  <p class = "section_padding" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!
     <p>
 </section>
   
-  <section>
-   <div class = "title_position">Title</div>
+  <section class = "second_color">
+   <div class = "title_position_2">Title</div>
   <div  class = "clear"></div>
-  <p class = "section_padding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!</section>
+  <p class = "section_padding" class = "second_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!</section>
 
-  <section>
-  <div class = "title_position">Title</div>
+  <section class = "third_color"">
+  <div class = "title_position_3">Title</div>
   <div  class = "clear"></div>
-  <p class = "section_padding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!</section>
+  <p class = "section_padding" class = "third_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae voluptatibus veniam placeat iure unde assumenda porro neque voluptate esse sit magnam facilis labore odit, provident a ea! Nulla, minima.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nemo vitae, cupiditate odio magnam reprehenderit esse eum reiciendis repellendus incidunt sequi! Autem, laudantium, accusamus. Doloribus tempora alias minima laborum, provident!</section>
   
   <section class= "clear">This is regular content continuing after the the paragraph boxes.</section>
 
@@ -63,7 +63,9 @@
     document.getElementsByTagName("section")[0].setAttribute("id", "desk"); 
     document.getElementsByTagName("section")[1].setAttribute("id", "desk"); 
     document.getElementsByTagName("section")[2].setAttribute("id", "desk"); 
-    document.getElementsByTagName("div")[0].setAttribute("class", "title_position ")
+    document.getElementsByTagName("div")[0].setAttribute("class", "title_position_1 ")
+    document.getElementsByTagName("div")[2].setAttribute("class", "title_position_2")
+    document.getElementsByTagName("div")[4].setAttribute("class", "title_position_3")
 
   }
 
@@ -82,9 +84,10 @@
    document.getElementsByTagName("section")[0].setAttribute("id", "mobile"); 
    document.getElementsByTagName("section")[1].setAttribute("id", "mobile"); 
    document.getElementsByTagName("section")[2].setAttribute("id", "mobile"); 
-   document.getElementsByTagName("div")[4].setAttribute("class", "title_position ")
+   ocument.getElementsByTagName("div")[0].setAttribute("class", "title_position_1 ")
+    document.getElementsByTagName("div")[2].setAttribute("class", "title_position_2")
+    document.getElementsByTagName("div")[4].setAttribute("class", "title_position_3")
   }
-  
 
 </script>
 </body>
