@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Module 2 Solution</title>
+		<link rel = "stylesheet" href = "css/style.css">
+		<style>
+			.preserve { 
+				white-space : pre;  /* preserve the original line breaks and spacing
+  						 (I need this because the content of the 
+  						 chapter is just text not HTML, so normally
+  						 the line breaks would be ignored) */
+  				font-size: 115%;
+  				display: none;
+  				}
+		</style>
+	</head>
+	<body onload = "screen_change()"  onresize = "screen_change()">
+		<h1>Module 2 Solution</h1>
+		<header>
+			<pre	 class = "preserve">
+				Here is what you will need to complete the assignment:
+				(If you haven’t already) Create a GitHub.com account and a repository 
+				that you will use for this class.
+				
+				
+				(If you haven’t already) Follow the Development Setup Video (beginning of Module 1) 
+				instructions on how to create a repository and set it up such that you can host and 
+				view your finished web pages on GitHub Pages, i.e., GitHub.io domain name. 
+				You will need to provide that URL for your peer review.
+				
+				
+				Create a folder in your repository that will serve as a container folder for your 
+				solution to this assignment. You can call it whatever you want. For example, 
+				‘module3-solution’ or ‘mod3_solution’, etc. Create an 'index.html' file inside 
+				the solution container folder, e.g., 'module3-solution/index.html’.
+				
+				
+				The implementation of the page you will be creating should follow the mockup 
+				illustrations shown below. You are provided 3 mockups: 
+					desktop and tablet (same), 
+					mobile, and 
+					mobile with mobile menu dropdown shown. 
+				Your implementation has to be JUST 1 page. In other words, you will be creating a single,
+				responsive page.
+				
+				
+				Your page must include a CSS file. No inline styles allowed. 
+				Your CSS file should be placed into a 'css' folder under the 
+				solution container folder, e.g., 'module3-solution/css'.
+				
+				
+				For this assignment, you are to use 
+					Twitter Bootstrap CSS Framework as much as possible. 
+				I suggest you start with copying the starter bootstrap files and folders we discussed in 
+				Lecture 25 part 2. If you’ve cloned/downloaded the code example repository, it should be 
+				in the ‘examples/Lecture25’ folder. Copy the contents of ‘examples/Lecture25’ to your solution container folder (e.g., ‘module3-solution’) as a starting point..
+				
+				
+				Since we are using Bootstrap for this assignment, instead of specifying pixel ranges, 
+				I will define our desktop, tablet, and mobile views in terms of Bootstrap CSS class prefixes, 
+				i.e., 
+					‘md’, ‘sm’, and ‘xs’.
+				Desktop mockup illustration should correspond to Bootstrap ‘md’-based classes
+				Tablet mockup illustration should correspond to Bootstrap ‘sm’-based classes
+				Mobile mockup illustration should correspond to Bootstrap ‘xs’-based classes
+				
+				
+				Navbar: 
+					Create a navbar that scrolls away together with the page, i.e., 
+					the default one that does not stay in the same place when the page scrolls. 
+					The navbar should have a company name (i.e., ‘navbar-brand’ class) called 
+					“Food, LLC” that is aligned to the left side of the navbar. 
+					(See http://getbootstrap.com/components/#navbar. Make the browser window 
+					narrower to see the mobile menu button appear in the first example shown 
+					at the provided link.)
+				
+					For desktop and tablet view, the navbar should not contain anything else. 
+					No other buttons should be visible. 
+					(Hint: use ‘visible-xs’ class on the button that activates the dropdown.)
+				
+				
+				Navbar - Mobile View: 
+					Create a simple menu button (3 horizontal bars). 
+					When the user clicks that button, a dropdown menu should appear 
+					(as illustrated in Mobile Open Menu illustration below.) 
+					The dropdown menu should contain 3 items: 
+						Chicken, Beef, and Sushi.
+				
+					The dropdown menu should take up the entire width of the browser window. 
+					Make sure the dropdown menu has a background color set that distinguishes 
+					it from the rest of the content.
+					
+					(Hint: See http://getbootstrap.com/components/#navbar and Lecture 31 for 
+					examples on how to accomplish this.)
+				
+				
+				 Page Heading. 
+					The page heading that says Our Menu should be centered within the browser window. 
+					You must use a Bootstrap class to accomplish this.
+				
+					(Hint: look for a Bootstrap class that centers text, see http://getbootstrap.com/css/#type-alignment.)
+				
+				
+				 Create a single really tall section that will use the Bootstrap Grid and take up the 
+				 entire width of the browser window (minus some margins, of course) for all views: 
+					desktop, tablet, and mobile. 
+				To make the section really tall, you can either fill it out with a LOT of text or simply 
+				set its height to something like 1000px. It needs to be tall enough to cause scrolling 
+				down to be required to view the bottom of the section. Make sure its background color is 
+				set to distinguish it from the rest of the content. 
+				(Hint: don’t forget to have an element with a class=’container’ or class=’container-fluid’ 
+				wrapping your grid. Remember that to have the grid do something “always”, i.e., no matter 
+				what browser window size, use the col-xs-... classes. In this case, since we want the section 
+				to take up the entire row, use col-xs-12.)
+				
+				
+				Both the tablet view and the desktop view of what’s graded and required is the same. 
+				
+				Here is the mockup illustration of the desktop & tablet version of the site 
+				(only required graded parts shown):
+				picture1
+				Here is the mockup illustration of the mobile view (only required graded parts are shown):
+				picture2
+
+			</pre>
+		<!-- Nav bar from bootstrap -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a href="index.html" class="pull-left visible-md visible-lg">
+						<div id="logo-img"></div>
+					</a>
+
+					<div class="navbar-brand">
+						<a href="index.html"><h1>David Chu's China Bistro</h1></a>
+						<p>
+							<img src="images/star-k-logo.png" alt="Kosher certification">
+							<span>Kosher Certified</span>
+						</p>
+					</div>
+				</div><!-- navbar-header ends -->
+			    
+			   </nav>
+
+		</header>
+
+		<section class = "section_background" class=’container’ class = "col-xs-12" style = "height:1000px;">
+		<h2>In section</h2>
+			
+		</section>
+		
+		
+		<script type="text/javascript">
+		  /* Globaa variables */
+		  var msg;
+		  var width;
+		  /* This function is called when page is loaded or the page is rezised.
+		  */  
+		  function screen_change() {
+		     width = window.innerWidth;
+		    // var msg;
+		    if(width >= 992){
+		      msg = "is now Destop: width of this screen is </span>";
+		      title_msg = "Desktop";
+		      desktop()
+		    }
+		    if(width <= 991 && width >= 767) {
+		      msg = "is now Tablet: width of this screen is ";      
+		      title_msg = "Tablet";
+		      tablet()
+		    }
+		    if(width <= 768) {
+		      msg = "is now Mobile: width of this screen is "; 
+		      title_msg = "Mobile";
+		      mobile()    
+		    }
+		    // var msg_1 = document.getElementById("screen_width");
+		    // msg_1.innerHTML = msg + width;
+		    document.getElementById("header").innerHTML = msg + width;
+		 	
+		 	
+		  }
+		  
+		  /* This function is callaed when the scrren width is bigger than or equal to 992px.*/
+		  function desktop() {
+		    document.getElementsByTagName("section")[0].setAttribute("id", "desk"); 
+		    document.getElementsByTagName("section")[1].setAttribute("id", "desk"); 
+		    document.getElementsByTagName("section")[2].setAttribute("id", "desk"); 
+		    document.getElementsByTagName("div")[0].setAttribute("class", "title_position_1 ")
+		    document.getElementsByTagName("div")[2].setAttribute("class", "title_position_2")
+		    document.getElementsByTagName("div")[4].setAttribute("class", "title_position_3")
+		
+		  }
+		
+		  /* This function is callaed when the scrren width is  less tha or equal to 991px and at the same time the scrren width is  bigger or equal than 768px.*/
+		
+		  function tablet() {
+		    document.getElementsByTagName("section")[0].setAttribute("id", "tablet_1_2"); 
+		    document.getElementsByTagName("section")[1].setAttribute("id", "tablet_1_2"); 
+		    document.getElementsByTagName("section")[2].setAttribute("id", "tablet_3"); 
+		    document.getElementsByTagName("section")[2]
+		    document.getElementsByTagName("div")[4].setAttribute("class", "title_position_tablet_3 ")
+		  }
+		
+		  /* This function is callaed when the scrren width is  less than or equal to 767px.*/
+		 function mobile() {
+		   document.getElementsByTagName("section")[0].setAttribute("id", "mobile"); 
+		   document.getElementsByTagName("section")[1].setAttribute("id", "mobile"); 
+		   document.getElementsByTagName("section")[2].setAttribute("id", "mobile"); 
+		   ocument.getElementsByTagName("div")[0].setAttribute("class", "title_position_1 ")
+		    document.getElementsByTagName("div")[2].setAttribute("class", "title_position_2")
+		    document.getElementsByTagName("div")[4].setAttribute("class", "title_position_3")
+		  }
+		
+		</script>
+	</body>
+</html>
