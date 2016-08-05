@@ -1,17 +1,20 @@
 /* MENU CATEGORIES PAGE */
 .category-tile { 
   position: relative;
-  border: 2px solid #3F0C1F;
+  /*border: 2px solid #3F0C1F;*/
   overflow: hidden;
-  width: 600px;
-  height: 200px;
-  margin: 0 auto 15px;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto 0px;
+  background-color: #dfedff;
+  padding: 0 2%;
+  text-align: left;
 }
 .category-tile span {
   position: ;
   bottom: 0;
   right: 0;
-  width: 100%;
+  width: 100%;  
   text-align: center;
   font-size: 1.2em;
   text-transform: uppercase;
@@ -20,10 +23,21 @@
   opacity: .8;
 }
 .category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
+  /*box-shadow: 0 1px 5px 1px #cccccc;*/
 }
 
 #menu-categories-title + div {
   margin-bottom: 50px;
 }
 /* END MENU CATEGORIES PAGE */
+/* My CSS */
+.my_borders {
+  border: 4.5px solid maroon;
+}
+.my_font_size {
+  font-size: 130%;
+  font-style: bold;
+  margin: 0.5%
+
+
+}
